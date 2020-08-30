@@ -61,6 +61,10 @@ class GeoJsonGeometries {
   }
 
   _loadGeneric(geoJson, properties) {
+    if(!geoJson){
+      geoJson ={}
+    }
+    
     if (this.pointsList !== undefined) {
       switch (geoJson.type) {
         case POINT: {
